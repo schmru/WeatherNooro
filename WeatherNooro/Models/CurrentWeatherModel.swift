@@ -30,4 +30,16 @@ struct CurrentWeatherModel: Codable {
         uv = try values.decode(Int.self, forKey: .uv)
         feelsLikeTemperature = try values.decode(Float.self, forKey: .feelsLikeTemperature)
     }
+    
+    init(temperature: Float,
+         condition: WeatherConditionModel,
+         humidity: Int,
+         uv: Int,
+         feelsLikeTemperature: Float){
+        self.temperature = temperature
+        self.condition = condition
+        self.humidity = humidity
+        self.uv = uv
+        self.feelsLikeTemperature = feelsLikeTemperature
+    }
 }

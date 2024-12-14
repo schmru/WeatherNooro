@@ -33,12 +33,12 @@ struct ContentView: View {
                 Text("No City Selected")
                     .font(Font
                             .custom("Poppins", size: 30)
-                            .weight(.medium))
+                            .weight(.semibold))
                     .foregroundColor(Color("TextColor"))
                 Text("Please Search For A City")
                     .font(Font
                             .custom("Poppins", size: 15)
-                            .weight(.medium))
+                            .weight(.semibold))
                     .foregroundColor(Color("TextColor"))
             } else {
                 if viewModel.isLoading {
@@ -46,7 +46,9 @@ struct ContentView: View {
                     ProgressView()
                 } else {
                     if let data = viewModel.weatherData {
-                        Text(data.location.name)
+                        Spacer()
+                            .frame(height: 75)
+                        CurrentWeatherView(weatherData: data)
                     }
                 }
             }

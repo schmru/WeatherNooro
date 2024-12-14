@@ -19,6 +19,8 @@
 		71DB83B02D0DE19500317B11 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83AF2D0DE19500317B11 /* WeatherResponse.swift */; };
 		71DB83B22D0DE4DB00317B11 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83B12D0DE4DB00317B11 /* ResponseParser.swift */; };
 		71DB83B62D0DEDD800317B11 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83B52D0DEDD800317B11 /* NetworkError.swift */; };
+		71DB83B92D0DF95900317B11 /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83B82D0DF95900317B11 /* CurrentWeatherView.swift */; };
+		71DB83BB2D0DFC5500317B11 /* TitleValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83BA2D0DFC5500317B11 /* TitleValueView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		71DB83AF2D0DE19500317B11 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		71DB83B12D0DE4DB00317B11 /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		71DB83B52D0DEDD800317B11 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		71DB83B82D0DF95900317B11 /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
+		71DB83BA2D0DFC5500317B11 /* TitleValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleValueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 		71DB83912D0DBDB700317B11 /* WeatherNooro */ = {
 			isa = PBXGroup;
 			children = (
+				71DB83B72D0DF92400317B11 /* Subviews */,
 				71DB83922D0DBDB700317B11 /* WeatherNooroApp.swift */,
 				71DB83A62D0DDBBB00317B11 /* Models */,
 				71DB83B32D0DE58400317B11 /* Helpers */,
@@ -129,6 +134,15 @@
 				71DB83B12D0DE4DB00317B11 /* ResponseParser.swift */,
 			);
 			path = DataParsers;
+			sourceTree = "<group>";
+		};
+		71DB83B72D0DF92400317B11 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				71DB83B82D0DF95900317B11 /* CurrentWeatherView.swift */,
+				71DB83BA2D0DFC5500317B11 /* TitleValueView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +220,8 @@
 				71DB83952D0DBDB700317B11 /* ContentView.swift in Sources */,
 				71DB83AC2D0DDC8300317B11 /* CurrentWeatherModel.swift in Sources */,
 				71DB83932D0DBDB700317B11 /* WeatherNooroApp.swift in Sources */,
+				71DB83BB2D0DFC5500317B11 /* TitleValueView.swift in Sources */,
+				71DB83B92D0DF95900317B11 /* CurrentWeatherView.swift in Sources */,
 				71DB83AA2D0DDC1C00317B11 /* LocationModel.swift in Sources */,
 				71DB83A22D0DC92C00317B11 /* ContentViewModel.swift in Sources */,
 				71DB83B02D0DE19500317B11 /* WeatherResponse.swift in Sources */,
