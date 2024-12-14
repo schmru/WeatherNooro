@@ -12,7 +12,7 @@ struct ContentView: View {
     @State var searchText: String = ""
     
     var body: some View {
-        ScrollView {
+        VStack {
             HStack {
                 TextField("", text: $searchText, prompt:
                             Text("Search Location")
@@ -25,11 +25,25 @@ struct ContentView: View {
                     .foregroundColor(Color("SearchPlaceholderTextColor"))
             }
             .padding()
-            
             .background(Color("SearchBackgroundColor"))
             .cornerRadius(16.0)
             
-            Spacer()
+            if viewModel.selectedCity.isEmpty {
+                Spacer()
+                Text("No City Selected")
+                    .font(Font
+                            .custom("Poppins", size: 30)
+                            .weight(.medium))
+                    .foregroundColor(Color("TextColor"))
+                Text("Please Search For A City")
+                    .font(Font
+                            .custom("Poppins", size: 15)
+                            .weight(.medium))
+                    .foregroundColor(Color("TextColor"))
+                Spacer()
+            } else {
+                
+            }
         }
         .padding(.horizontal, 24.0)
         .padding(.top, 24.0)

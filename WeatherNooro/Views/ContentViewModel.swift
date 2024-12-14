@@ -8,5 +8,5 @@
 import Foundation
 
 class ContentViewModel: ObservableObject {
-        
+    @Published var selectedCity = ""
 }
