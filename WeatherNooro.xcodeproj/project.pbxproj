@@ -25,6 +25,7 @@
 		71DB83C22D0E08E100317B11 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83C12D0E08E100317B11 /* CityView.swift */; };
 		71DB83C42D0E08EF00317B11 /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83C32D0E08EF00317B11 /* CityViewModel.swift */; };
 		71DB83C82D0E102D00317B11 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83C72D0E102D00317B11 /* UserDefaultsManager.swift */; };
+		71DB83CA2D0E125200317B11 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 71DB83C92D0E125200317B11 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		71DB83C12D0E08E100317B11 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 		71DB83C32D0E08EF00317B11 /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 		71DB83C72D0E102D00317B11 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		71DB83C92D0E125200317B11 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		71DB83862D0DBDB700317B11 = {
 			isa = PBXGroup;
 			children = (
+				71DB83C92D0E125200317B11 /* README.md */,
 				71DB83912D0DBDB700317B11 /* WeatherNooro */,
 				71DB83902D0DBDB700317B11 /* Products */,
 			);
@@ -223,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DB83CA2D0E125200317B11 /* README.md in Resources */,
 				71DB839A2D0DBDBD00317B11 /* Preview Assets.xcassets in Resources */,
 				71DB83972D0DBDBD00317B11 /* Assets.xcassets in Resources */,
 			);
