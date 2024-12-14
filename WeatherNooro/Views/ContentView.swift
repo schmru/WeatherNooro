@@ -40,13 +40,21 @@ struct ContentView: View {
                             .custom("Poppins", size: 15)
                             .weight(.medium))
                     .foregroundColor(Color("TextColor"))
-                Spacer()
             } else {
-                
+                if viewModel.isLoading {
+                    Spacer()
+                    ProgressView()
+                } else {
+                    if let data = viewModel.weatherData {
+                        Text(data.location.name)
+                    }
+                }
             }
+            Spacer()
         }
         .padding(.horizontal, 24.0)
         .padding(.top, 24.0)
+        .onAppear(perform: viewModel.fetchWeatherForSavedCity)
     }
 }
 
