@@ -35,7 +35,7 @@ struct CurrentWeatherModel: Codable {
          condition: WeatherConditionModel,
          humidity: Int,
          uv: Int,
-         feelsLikeTemperature: Float){
+         feelsLikeTemperature: Float) {
         self.temperature = temperature
         self.condition = condition
         self.humidity = humidity

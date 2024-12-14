@@ -21,6 +21,9 @@ struct ContentView: View {
                 )
                     .font(Font.custom("Poppins", size: 15))
                     .foregroundColor(Color("TextColor"))
+                    .onChange(of: searchText) { text in
+                        viewModel.searchCity(for: text)
+                    }
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(Color("SearchPlaceholderTextColor"))
             }
@@ -28,31 +31,46 @@ struct ContentView: View {
             .background(Color("SearchBackgroundColor"))
             .cornerRadius(16.0)
             
-            if viewModel.selectedCity.isEmpty {
+            if searchText.isEmpty {
+                if viewModel.selectedCity.isEmpty {
+                    Spacer()
+                    Text("No City Selected")
+                        .font(Font
+                                .custom("Poppins", size: 30)
+                                .weight(.semibold))
+                        .foregroundColor(Color("TextColor"))
+                    Text("Please Search For A City")
+                        .font(Font
+                                .custom("Poppins", size: 15)
+                                .weight(.semibold))
+                        .foregroundColor(Color("TextColor"))
+                } else {
+                    if viewModel.isLoading {
+                        Spacer()
+                        ProgressView()
+                    } else {
+                        if let data = viewModel.weatherData {
+                            Spacer()
+                                .frame(height: 75)
+                            CurrentWeatherView(weatherData: data)
+                        }
+                    }
+                }
                 Spacer()
-                Text("No City Selected")
-                    .font(Font
-                            .custom("Poppins", size: 30)
-                            .weight(.semibold))
-                    .foregroundColor(Color("TextColor"))
-                Text("Please Search For A City")
-                    .font(Font
-                            .custom("Poppins", size: 15)
-                            .weight(.semibold))
-                    .foregroundColor(Color("TextColor"))
             } else {
                 if viewModel.isLoading {
                     Spacer()
                     ProgressView()
                 } else {
-                    if let data = viewModel.weatherData {
-                        Spacer()
-                            .frame(height: 75)
-                        CurrentWeatherView(weatherData: data)
+                    Spacer()
+                        .frame(height: 32)
+                    ScrollView {
+                        ForEach(viewModel.cityList, id: \.self) { city in
+                            CityView(viewModel: .init(cityName: city.url))
+                        }
                     }
                 }
             }
-            Spacer()
         }
         .padding(.horizontal, 24.0)
         .padding(.top, 24.0)

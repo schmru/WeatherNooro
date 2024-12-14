@@ -29,7 +29,7 @@ struct CurrentWeatherView: View {
             Spacer()
                 .frame(height: 24)
             
-            Text("\(String(format:"%.1f", weatherData.current.temperature))°")
+            Text("\(String(format:"%.0f", weatherData.current.temperature))°")
                 .font(Font
                         .custom("Poppins", size: 70)
                         .weight(.medium))
@@ -41,7 +41,7 @@ struct CurrentWeatherView: View {
             HStack(spacing: 56.0) {
                 TitleValueView(title: "Humidity", value: "\(weatherData.current.humidity)%")
                 TitleValueView(title: "UV", value: "\(weatherData.current.uv)")
-                TitleValueView(title: "Feels Like", value: "\(String(format:"%.1f", weatherData.current.feelsLikeTemperature))°")
+                TitleValueView(title: "Feels Like", value: "\(String(format:"%.0f", weatherData.current.feelsLikeTemperature))°")
             }
             .padding(16.0)
             .background(Color("SearchBackgroundColor"))
