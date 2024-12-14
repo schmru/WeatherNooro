@@ -13,6 +13,11 @@ class ContentViewModel: ObservableObject {
     @Published var cityList: [CityModel] = [CityModel]()
     @Published var isLoading = false
     
+    func loadSavedCity() {
+        selectedCity = UserDefaultsManager.getCity()
+        fetchWeatherForSavedCity()
+    }
+    
     func fetchWeatherForSavedCity() {
         isLoading = true
         Task { @MainActor in
@@ -35,5 +40,11 @@ class ContentViewModel: ObservableObject {
                 isLoading = false
             }
         }
+    }
+    
+    func saveCity(cityUrl: String) {
+        selectedCity = cityUrl
+        fetchWeatherForSavedCity()
+        UserDefaultsManager.save(cityUrl: cityUrl)
     }
 }

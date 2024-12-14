@@ -67,6 +67,10 @@ struct ContentView: View {
                     ScrollView {
                         ForEach(viewModel.cityList, id: \.self) { city in
                             CityView(viewModel: .init(cityName: city.url))
+                                .onTapGesture(perform: {
+                                    viewModel.saveCity(cityUrl: city.url)
+                                    searchText = ""
+                                })
                         }
                     }
                 }
@@ -74,7 +78,7 @@ struct ContentView: View {
         }
         .padding(.horizontal, 24.0)
         .padding(.top, 24.0)
-        .onAppear(perform: viewModel.fetchWeatherForSavedCity)
+        .onAppear(perform: viewModel.loadSavedCity)
     }
 }
 

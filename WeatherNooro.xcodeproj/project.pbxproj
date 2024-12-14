@@ -24,6 +24,7 @@
 		71DB83BD2D0E015600317B11 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83BC2D0E015600317B11 /* CityModel.swift */; };
 		71DB83C22D0E08E100317B11 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83C12D0E08E100317B11 /* CityView.swift */; };
 		71DB83C42D0E08EF00317B11 /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83C32D0E08EF00317B11 /* CityViewModel.swift */; };
+		71DB83C82D0E102D00317B11 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB83C72D0E102D00317B11 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		71DB83BC2D0E015600317B11 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		71DB83C12D0E08E100317B11 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 		71DB83C32D0E08EF00317B11 /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		71DB83C72D0E102D00317B11 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				71DB83B42D0DE59100317B11 /* DataParsers */,
+				71DB83C72D0E102D00317B11 /* UserDefaultsManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				71DB83952D0DBDB700317B11 /* ContentView.swift in Sources */,
 				71DB83AC2D0DDC8300317B11 /* CurrentWeatherModel.swift in Sources */,
 				71DB83BD2D0E015600317B11 /* CityModel.swift in Sources */,
+				71DB83C82D0E102D00317B11 /* UserDefaultsManager.swift in Sources */,
 				71DB83C22D0E08E100317B11 /* CityView.swift in Sources */,
 				71DB83932D0DBDB700317B11 /* WeatherNooroApp.swift in Sources */,
 				71DB83BB2D0DFC5500317B11 /* TitleValueView.swift in Sources */,
